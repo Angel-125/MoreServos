@@ -1,0 +1,86 @@
+PART:NEEDS[SquadExpansion/Serenity]
+{
+	// --- general parameters ---
+	name = wbiTrackingServo
+	module = Part
+	author = Pak/Michael Billard (Angel-125)
+
+	// --- asset parameters ---
+	rescaleFactor = 1
+	MODEL
+	{
+		model = WildBlueIndustries/MoreServos/Parts/Robotics/TrackingServo/trackingServo
+	}
+
+	// --- node definitions ---
+	// definition format is Position X, Position Y, Position Z, Up X, Up Y, Up Z
+	node_stack_top = 0.0, 0.192, 0.0, 0.0, 1.0, 0.0, 0
+	node_stack_bottom = 0.0, 0, 0.0, 0.0, -1.0, 0.0, 0
+	node_attach = 0.0, 0, 0.0, 0.0, -1.0, 0.0, 0
+
+	// --- editor parameters ---
+	TechRequired = actuators
+	entryCost = 6850
+	cost = 290
+	category = Robotics
+	subcategory = 0
+	title = Tracking Servo
+	manufacturer = Kuzzter Instruments
+	description = This servo can spin parts to face a target. Or used as a slide projector.
+
+	// attachment rules: stack, srfAttach, allowStack, allowSrfAttach, allowCollision
+	attachRules = 1,1,1,1,1
+
+	// --- standard part parameters ---
+	mass = 0.15
+	dragModelType = default
+	maximum_drag = 0.25
+	minimum_drag = 0.25
+	angularDrag = .5
+	crashTolerance = 45
+	breakingForce = 5500
+	breakingTorque = 5500
+	maxTemp = 900
+	fuelCrossFeed = True
+	heatConductivity = 0.001
+
+	MODULE
+	{
+		name = WBIBGTrackingServo
+		servoTransformName = Rotor
+		baseTransformName = BaseMesh
+		servoAttachNodes = top
+		servoSrfMeshNames = RotorMesh
+		traverseVelocityLimits = 1, 180
+		hardMinMaxLimits = -177, 177
+		softMinMaxAngles = -177, 177
+		targetAngle = 0
+		mainAxis = Z
+		maxMotorOutput = 50
+		driveSpringMutliplier = 100
+		driveDampingMutliplier = 20
+		motorizedMassPerKN = 0.0002
+		motorizedCostPerDriveUnit = 1
+		connectedMassScale = 1
+		efficiency = 0.75
+		baseResourceConsumptionRate = 0.01
+
+		debugEnabled = true
+		rotationTransformName = Rotor
+		referenceRotationTransformName = rotationReference
+
+		//Flag to indicate whether or not the tracking controller is allowed to track random targets
+		//A player selected target overrides random tracking.
+		canTrackRandomTargets = true
+
+		//If we can track random targets, then after the specified number of seconds, automatically track something else.
+		randomTrackDuration = 60
+
+		// if RESOURCE is used, negative power is simply dumped
+		RESOURCE
+		{
+			name = ElectricCharge
+			rate = 1
+		}
+	}
+}
