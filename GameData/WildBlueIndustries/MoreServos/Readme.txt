@@ -9,6 +9,13 @@ Copy the contents of the mod's GameData directory into your GameData folder.
 
 ---REVISION HISORY---
 
+1.1.1
+- Fixed textures
+- Fixed control issues with the High Angle Hinge.
+
+1.1.0
+- Updated to KSP 1.8
+
 1.0 Initial release
 - Extension Boom: There are two versions, medium and pocket edition, that are lightweight booms similar to station arms.
 - Right Angle Servo: This servo gives you a 360 degree rotation at a right angle to the part that it's attached to.
