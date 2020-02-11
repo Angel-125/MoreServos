@@ -9,6 +9,9 @@ Copy the contents of the mod's GameData directory into your GameData folder.
 
 ---REVISION HISORY---
 
+1.1.2
+- Compatibility update
+
 1.1.1
 - Fixed textures
 - Fixed control issues with the High Angle Hinge.
