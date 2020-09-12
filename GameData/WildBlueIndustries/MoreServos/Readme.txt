@@ -9,6 +9,22 @@ Copy the contents of the mod's GameData directory into your GameData folder.
 
 ---REVISION HISORY---
 
+1.2.0
+Part Variants
+- Rounded Ends: All servo and Extension Boom parts now have part variants for square and rounded ends.
+
+Reworked Parts - original parts deprecated
+- End Effector: Removed rotating servo due to game issues when docking with the Micro Port.
+- High Angle Hinge: Renamed to Rota-Tron Elbow Hinge and reworked the mesh.
+- Micro Port: Reworked mesh.
+
+New Parts
+- Rota-Tron Axial Servo: This small servo provides 360-degree rotation equal to the Breaking Ground Rotation Servo M-06
+- Rota-Tron Hinge Joint: This servo provides 180-degree rotation equal to the Breaking Ground G-00 Hinge.
+
+Mod Compatibility
+- HTRobotics MM Patch: The Mk 1 End Effector can dock with the HTRobotics Power Data Grapple Fixture and can be used interchangeably with the Micro Port.
+
 1.1.2
 - Compatibility update
 
